@@ -30,3 +30,6 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
+
+print(datetime.date(2019, 11, 12))
+print(calendar.calendar(datetime.utcnow()))
