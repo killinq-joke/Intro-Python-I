@@ -53,6 +53,10 @@ print(f3(8))     # Should print 9
 # Note: Google "python keyword arguments".
 
 # YOUR CODE HERE
+def f4(**kwargs):
+    for i, j in zip(kwargs, kwargs.values()):
+        print(f'key: {i}, value {j}')
+    
 
 # Should print
 # key: a, value: 12
