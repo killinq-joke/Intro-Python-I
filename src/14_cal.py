@@ -31,5 +31,12 @@ import sys
 import calendar
 from datetime import datetime
 
-print(datetime.date(2019, 11, 12))
-print(calendar.calendar(datetime.utcnow()))
+def cal(*args):
+    if args[0] == "" and args[1] == "":
+        print(calendar.prmonth(datetime.utcnow().year, datetime.utcnow().month))
+    elif args[0] == "" or args[1] == "":
+        print(calendar.prmonth(datetime.utcnow().year, int(args[0] or args[1])))
+    else:
+        print(args)
+
+cal(input("month: "), input("year: "))
