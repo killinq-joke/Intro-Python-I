@@ -21,7 +21,7 @@ f.close()
 
 # YOUR CODE HERE
 b = open("D:\\sites\Intro-Python-I\src\\bar.txt", "w")
-b.write("Hello World\n") 
-b.write("This is our new text file\n") 
+b.write("Hello World\n")
+b.write("This is our new text file\n")
 b.write("and this is another line.\n")
 b.close()
