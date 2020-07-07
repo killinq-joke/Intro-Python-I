@@ -41,4 +41,4 @@ def cal(*args):
     else:
       print("please add a correct month & year")
 
-cal(input("month: "), input("year: "))
+cal(sys.argv[1], sys.argv[2])
