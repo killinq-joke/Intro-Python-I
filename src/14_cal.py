@@ -37,6 +37,6 @@ def cal(*args):
     elif args[0] == "" or args[1] == "":
         print(calendar.prmonth(datetime.utcnow().year, int(args[0] or args[1])))
     else:
-        print(args)
+        print(calendar.prmonth(int(args[1]), int(args[0])))
 
 cal(input("month: "), input("year: "))
