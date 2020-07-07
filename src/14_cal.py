@@ -31,14 +31,17 @@ import sys
 import calendar
 from datetime import datetime
 
+
 def cal(*args):
     if args[0] == "" and args[1] == "":
         print(calendar.prmonth(datetime.utcnow().year, datetime.utcnow().month))
     elif args[0] == "" or args[1] == "":
-        print(calendar.prmonth(datetime.utcnow().year, int(args[0] or args[1])))
+        print(calendar.prmonth(
+            datetime.utcnow().year, int(args[0] or args[1])))
     elif int(args[0]) >= 1 and int(args[0]) <= 12:
         print(calendar.prmonth(int(args[1]), int(args[0])))
     else:
-      print("please add a correct month & year")
+        print("please add a correct month & year")
+
 
 cal(sys.argv[1], sys.argv[2])
